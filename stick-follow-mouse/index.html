@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <canvas id="canvas"></canvas>
+
+   <script>
+      let canvas, ctx, w, h;
+      let units, pointer;
+      let area = {
+         distance: 20,
+         padding: 30
+      }
+
+      function init() {
+         canvas = document.querySelector("#canvas");
+         ctx = canvas.getContext("2d");
+
+         resizeReset();
+         animationLoop();
+      }
+
+      function mousemove(e) {
+         pointer.x = e.x;
+         pointer.y = e.y;
+      }
+
+      function click(e) {
+         // floor : 정수로 내림
+         let idxa = area.cols * Math.floor((e.y - area.padding) / area.distance);
+         // ceil : 정수로 올림
+         let idxb = Math.ceil((e.x - area.padding) / area.distance);
+         let targetIdx = idxa + idxb - 1;
+         console.log(targetIdx);
+         units[targetIdx].spins = !units[targetIdx].spins;
+      }
+
+      function resizeReset() {
+         w = canvas.width = window.innerWidth;
+         h = canvas.height = window.innerHeight;
+
+         // 열 (세로)
+         area.cols = Math.floor((w - area.padding * 2) / area.distance);
+         // 행 (가로)
+         area.rows = Math.floor((h - area.padding * 2) / area.distance);
+
+         pointer = {
+            x: area.distance * (area.cols / 2) + area.padding,
+            y: area.distance * (area.rows / 2) + area.padding
+         }
+
+         units = [];
+
+         for (let i = 0; i < area.rows; i++) {
+            for (let j = 0; j < area.cols; j++) {
+               units.push(new Unit(j, i));
+            }
+         }
+      }
+
+      function animationLoop() {
+         ctx.clearRect(0, 0, w, h);
+         drawScene();
+         requestAnimationFrame(animationLoop);
+      }
+
+      function drawScene() {
+         units.map((unit) => {
+            unit.update();
+            unit.draw();
+         })
+      }
+
+      class Unit {
+         constructor(col, row) {
+            this.x = area.distance * (col + 0.5) + area.padding;
+            this.y = area.distance * (row + 0.5) + area.padding;
+            this.w = 18;
+            this.h = 3;
+            this.spins = false;
+         }
+         draw() {
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.angle);
+            ctx.scale(this.scale, this.scale);
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.alpha})`;
+            ctx.fillRect(-this.w / 2, -this.h / 2, this.w, this.h);
+            ctx.restore();
+         }
+         update() {
+            if (this.spins === false) {
+               // 삼각함수, 각도 구하기
+               this.angle = Math.atan2(pointer.y - this.y, pointer.x - this.x);
+               // 거리 = 제곱근구하기(x사이거리 제곱 + y사이거리 제곱);
+               this.distance = Math.sqrt(Math.pow(this.x - pointer.x, 2) + Math.pow(this.y - pointer.y, 2));
+               // 불투명도 = 최대값구하기(0.2 ~ (1 - 거리/가로반값))
+               this.alpha = Math.max(0.2, 1 - this.distance / (w * 0.5));
+               // 크기 
+               this.scale = Math.max(0.5, 1 - this.distance / (w * 0.5));
+            } else {
+               this.angle += 0.3;
+            }
+         }
+      }
+
+      window.addEventListener("DOMContentLoaded", init);
+      window.addEventListener("resize", resizeReset);
+      window.addEventListener("mousemove", mousemove);
+      window.addEventListener("click", click);
+
+   </script>
+</body>
+
+</html>
