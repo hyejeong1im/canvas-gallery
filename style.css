@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol, li {
+    list-style: none;
+}
+body {
+    background: #f8f1e7;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow-y: hidden;
+}
+a {
+    text-decoration: none;
+}
+
+/* hide scrollbar */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+  }
+
+header {
+    width: 100%;
+    background: #021385;
+    color: #f8f1e7;
+    padding: 50px 100px;
+}
+
+header h1 {
+    font-size: 5vh;
+}
+
+.canvaslist ul {
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100vh;
+   transform: rotate(-90deg) translate3d(0,-100vh,0);
+   transform-origin: right top;
+   overflow-y: auto;
+   overflow-x: hidden;
+   padding: 0;
+   height: 100vw;
+   perspective: 1px;
+   transform-style: preserve-3d;
+   padding-bottom: 10rem;
+}
+
+.canvaslist ul li {
+    padding: 150px 0;
+    transform: rotate(90deg) translateY(-10vh);
+}
+
+.canvaslist ul li:nth-child(1) {
+    /* padding-right: 200px; */
+}
+
+.canvaslist ul li a {
+}
+
+.canvaslist ul li .img {
+    width: 500px;
+    height: 300px;
+    background: #021385;
+    transition: 0.3s;
+    /* box-shadow: 0 10px 50px #cec6bc; */
+}
+
+.canvaslist ul li .img:hover {
+    transform: scale(1.05);
+}
+
+.canvaslist h3 {
+    font-size: 2vh;
+    margin-top: 20px;
+    color: #021385;
+}
