@@ -6,7 +6,7 @@ let minSpeed;
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.parent('spacefield');
-
+  
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
