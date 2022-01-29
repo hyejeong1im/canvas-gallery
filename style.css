@@ -58,23 +58,28 @@ header h1 {
 }
 
 .canvaslist ul li {
-    padding: 170px 0;
+    width: 50%;
+    padding: 100px 0;
     transform: rotate(90deg) translateY(-10vh);
 }
 
-.canvaslist ul li:nth-child(1) {
-    /* padding-right: 200px; */
+/* .canvaslist ul li:nth-child(1) {
+    transform: rotate(90deg) translateY(-20vh) scale(0.8);
 }
+.canvaslist ul li:nth-child(2) {
+    transform: rotate(90deg) translateY(-8vh) translateX(-15vh) scale(1.2);
+} */
 
 .canvaslist ul li a {
 }
 
 .canvaslist ul li img {
-    width: 760px;
-    height: 500px;
+    width: 500px;
+    height: 300px;
     background: var(--point-color);
     transition: 0.3s;
-    /* box-shadow: 0 10px 50px #cec6bc; */
+    object-fit: cover;
+    box-shadow: 0 10px 50px #cec6bc;
 }
 
 .canvaslist ul li img:hover {
