@@ -45,18 +45,23 @@ a {
 
 header {
     width: 100%;
+    height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--back-color);
     color: var(--point-color);
-    padding: 40px 100px 0;
+    padding: 0 100px 0;
 }
 
 header h1 {
     /* position: absolute; */
     font-size: 6vh;
     font-weight: 800;
+}
+
+header a {
+    color: #fff;
 }
 
 .canvaslist {
@@ -117,4 +122,19 @@ header h1 {
 
 .canvaslist ul li span {
 
+}
+
+/* scroll progress bar */
+.progress {
+    position: fixed;
+    top: 130px;
+    z-index: 1;
+    width: 100%;
+    /* background-color: #F1F1F1; */
+}
+
+.progress-bar {
+    width: 0;
+    height: 2px;
+    background: #fff;
 }
