@@ -102,17 +102,16 @@ header a {
     color: var(--point-color);
 }
 
-.canvaslist ul li img {
-    width: 400px;
-    height: 400px;
-    background: var(--point-color);
-    transition: 0.3s;
+.canvaslist ul li video {
+    /* pointer-events: none; */
+    width: 380px;
+    height: 380px;
     object-fit: cover;
-    /* box-shadow: 0 10px 50px #00349f; */
+    transition: 0.3s;
 }
 
-.canvaslist ul li img:hover {
-    transform: scale(1.03);
+.canvaslist ul li video:hover {
+    transform: scale(1.06);
 }
 
 .canvaslist ul li h3 {
