@@ -6,10 +6,9 @@ canvaslist.onscroll = function () {
 
 // progress bar
 function progressBar() {
-    var winScroll = document.body.scrollTop || canvaslist.scrollTop;
-    console.log(winScroll)
-    var height = canvaslist.scrollHeight - canvaslist.clientHeight;
-    var scrolled = (winScroll / height) * 100;
+    let winScroll = document.body.scrollTop || canvaslist.scrollTop;
+    let height = canvaslist.scrollHeight - canvaslist.clientHeight;
+    let scrolled = (winScroll / height) * 100;
     document.getElementsByClassName("progress-bar")[0].style.width = scrolled + "%";
 }
 
