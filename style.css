@@ -101,9 +101,9 @@ header a {
     transform: rotate(90deg) translateY(-10vh);
 }
 
-.canvaslist ul li:nth-child(1) {
-    /* transform: rotate(90deg) translateY(-20vh) scale(0.8); */
-}
+/* .canvaslist ul li:nth-child(1) {
+    transform: rotate(90deg) translateY(-20vh) scale(0.8);
+} */
 
 /* .canvaslist ul li:nth-child(2) {
     transform: rotate(90deg) translateY(-8vh) translateX(-15vh) scale(1.2);
