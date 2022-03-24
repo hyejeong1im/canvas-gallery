@@ -99,6 +99,8 @@ header a {
 } */
 
 .canvaslist ul li a {
+    /* display: flex; */
+    /* flex-direction: column; */
     color: var(--point-color);
 }
 
@@ -115,12 +117,27 @@ header a {
 }
 
 .canvaslist ul li h3 {
-    font-size: 3vh;
-    margin-top: 20px;
+    font-size: 3.5vh;
+    margin-top: 5px;
+}
+
+.canvaslist ul li div {
+    margin-top: 10px;
 }
 
 .canvaslist ul li span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--back-color);
+    padding: 2px 10px;
+    background-color: #fff;
+    /* border: 1px solid #000; */
+    border-radius: 15px;
+}
 
+.canvaslist ul li p {
+    font-size: 0.9rem;
+    margin-top: 10px;
 }
 
 /* scroll progress bar */
