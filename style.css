@@ -70,7 +70,7 @@ header {
 
 header h1 {
     /* position: absolute; */
-    font-size: 6vh;
+    font-size: 3rem;
     font-weight: 800;
 }
 
@@ -131,7 +131,7 @@ header a {
 }
 
 .canvaslist ul li h3 {
-    font-size: 3.5vh;
+    font-size: 1.7rem;
     margin-top: 5px;
 }
 
