@@ -1,6 +1,6 @@
 <img width="1263" alt="canvasgallery" src="https://user-images.githubusercontent.com/84780174/159907249-a15b0a9b-2588-4dde-b7c5-a5bc30b18eef.png">
 <br/>
-🔗 https://limhyejeong.github.io/canvas-gallery/
+🔗 https://limhyejeong.github.io/canvasgallery/
 
 <br/><br/>
 
