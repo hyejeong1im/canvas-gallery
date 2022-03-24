@@ -46,6 +46,9 @@ a {
     align-items: center;
     background: var(--back-color);
     z-index: 100;
+    color: var(--point-color);
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 /* hide scrollbar */
