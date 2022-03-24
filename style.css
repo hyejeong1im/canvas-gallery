@@ -1,11 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&family=Roboto:wght@100;300;400;500;700;900&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
-/* @font-face {
-    font-family: 'Poppins';
-    src: url('./font/Poppins-Bold.ttf')
-} */
 
 :root {
     --back-color: #0048db;
@@ -76,6 +69,15 @@ header h1 {
 
 header a {
     color: #fff;
+}
+
+header img {
+    width: 40px;
+    filter: invert(1.0);
+}
+
+header img:hover {
+    filter: invert(0.8);
 }
 
 .canvaslist {
@@ -166,4 +168,13 @@ header a {
     width: 0;
     height: 2px;
     background: #fff;
+}
+
+aside {
+    position: absolute;
+    color: var(--point-color);
+    bottom: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    opacity: 0.4;
 }
