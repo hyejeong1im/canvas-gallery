@@ -25,9 +25,8 @@ video.forEach((item) => {
     async function playVideo() {
         try {
             await videoElem.play();
-            videoElem.classList.add("active");
         } catch (err) {
-            videoElem.classList.remove("active");
+            console.log(err);
         }
     }
     
@@ -36,7 +35,6 @@ video.forEach((item) => {
             playVideo();
         } else {
             videoElem.pause();
-            videoElem.classList.remove("active");
         }
     }
 });
