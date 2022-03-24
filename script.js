@@ -1,3 +1,10 @@
+window.addEventListener('DOMContentLoaded', function()
+{
+    loading.style.display = 'none';
+});
+
+const loading = document.querySelector('.loading');
+
 let canvaslist = document.querySelector('.canvaslist ul');
 
 canvaslist.onscroll = function () {
