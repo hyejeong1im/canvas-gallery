@@ -1,4 +1,5 @@
-<img width="1263" alt="canvasgallery" src="https://user-images.githubusercontent.com/84780174/159907249-a15b0a9b-2588-4dde-b7c5-a5bc30b18eef.png">
+<img width="1430" alt="canvasg" src="https://user-images.githubusercontent.com/84780174/160053398-7c4806b6-af6b-42ae-af2f-93b6d1539563.png">
+
 <br/>
 🔗 https://limhyejeong.github.io/canvasgallery/index.html
 
