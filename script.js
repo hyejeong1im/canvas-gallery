@@ -1,5 +1,4 @@
-window.addEventListener('DOMContentLoaded', function()
-{
+window.addEventListener('load', () => {
     loading.style.display = 'none';
 });
 
